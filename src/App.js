@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import University from "./components/University";
 import "./app.css";
 import Loader from "./components/Loader";
+import data from "./data.json";
 
 const App = () => {
   const [universitiesList, setUniversititesList] = useState(null);
@@ -14,18 +15,19 @@ const App = () => {
   });
   const [filteredUniversityList, setFilteredUniversityList] = useState([]);
 
-  const fetchUniversitiesData = async () => {
-    const response = await fetch(
-      "http://universities.hipolabs.com/search?country=India"
-    );
-    const responseJSON = await response.json();
-    setUniversititesList(responseJSON.slice(0, responseJSON.length / 2));
-  };
+  // const fetchUniversitiesData = async () => {
+  //   const response = await fetch(
+  //     "http://universities.hipolabs.com/search?country=India"
+  //   );
+  //   const responseJSON = await response.json();
+  //   setUniversititesList(responseJSON.slice(0, responseJSON.length / 2));
+  // };
 
   console.log(filter);
 
   useEffect(() => {
-    fetchUniversitiesData();
+    // fetchUniversitiesData();
+    setUniversititesList(data);
   }, []);
 
   const applySort = () => {
