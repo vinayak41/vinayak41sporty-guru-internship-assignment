@@ -1,0 +1,42 @@
+.university-container {
+  display: flex;
+  justify-content: center;
+  margin: 0 5vw;
+}
+
+.university-name {
+  background-color: #32725e;
+  padding: 0.6rem 4rem;
+  border-radius: 1rem;
+  margin-top: 5rem;
+  color: white;
+}
+
+.university-details {
+  border: 1px solid gray;
+  border-radius: 1rem;
+  padding-left: 4rem;
+  padding-right: 2rem;
+  background-color: rgb(255, 255, 255);
+}
+
+.university-details h3 span {
+  color: gray;
+}
+
+@media only screen and (max-width: 600px) {
+  .university-name {
+    padding: 0.4rem 1rem;
+  }
+  .university-name h1 {
+    font-size: 1.5rem;
+  }
+  .university-details {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1rem !important;
+  }
+  .university-details h3 {
+    font-size: 1rem !important;
+  }
+}
